@@ -1,2 +1,76 @@
-<!-- Contact -->
+---
+const currentYear = new Date().getFullYear();
+
+const contactLinks = [
+  {
+    label: "Email",
+    value: "manny@aialchemist.net",
+    href: "mailto:manny@aialchemist.net",
+  },
+  {
+    label: "Portfolio",
+    value: "aialchemist.net",
+    href: "https://aialchemist.net",
+  },
+  {
+    label: "GitHub",
+    value: "AIalchemistART",
+    href: "https://github.com/AIalchemistART",
+  },
+  {
+    label: "LinkedIn",
+    value: "clarityintelligence",
+    href: "https://www.linkedin.com/in/clarityintelligence",
+  },
+];
+---
+
+<section
+  id="contact"
+  class="border-t border-slate-200 bg-slate-950 px-6 py-20 text-white sm:px-8 sm:py-24"
+  aria-labelledby="contact-heading"
+>
+  <div class="mx-auto max-w-5xl">
+    <div class="max-w-2xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-300">
+        Contact
+      </p>
+      <h2 id="contact-heading" class="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+        Contact
+      </h2>
+    </div>
+
+    <address class="mt-10 not-italic">
+      <ul class="grid gap-4 sm:grid-cols-2" role="list">
+        {
+          contactLinks.map(({ label, value, href }) => (
+            <li>
+              <a
+                href={href}
+                class="group flex min-h-32 flex-col justify-between rounded-2xl border border-slate-700 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-indigo-400 hover:bg-slate-800 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-indigo-300 motion-reduce:transition-none"
+              >
+                <span class="text-sm font-semibold uppercase tracking-[0.16em] text-indigo-300">
+                  {label}
+                </span>
+                <span class="mt-6 break-words text-lg font-medium text-white underline decoration-slate-600 decoration-1 underline-offset-4 group-hover:decoration-indigo-300">
+                  {value}
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </address>
+  </div>
+</section>
+
+<footer class="border-t border-slate-800 bg-slate-950 px-6 py-8 text-slate-300 sm:px-8">
+  <div class="mx-auto flex max-w-5xl flex-col gap-3 text-sm leading-6 sm:flex-row sm:items-end sm:justify-between">
+    <p>
+      Built with Fredrin: Workers ran the tickets I wrote, and I reviewed every pull
+      request.
+    </p>
+    <time class="shrink-0 text-slate-400" datetime={String(currentYear)}>{currentYear}</time>
+  </div>
+</footer>
 

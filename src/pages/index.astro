@@ -1,0 +1,35 @@
+---
+import Contact from "../components/Contact.astro";
+import Hero from "../components/Hero.astro";
+import HowIWork from "../components/HowIWork.astro";
+import Shipped from "../components/Shipped.astro";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Matthew (Manny) Walker</title>
+    <meta
+      name="description"
+      content="Builder who ships production work by directing AI coding agents and reviewing what they produce."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Matthew (Manny) Walker" />
+    <meta
+      property="og:description"
+      content="Builder who ships production work by directing AI coding agents and reviewing what they produce."
+    />
+  </head>
+  <body>
+    <main>
+      <Hero />
+      <Shipped />
+      <HowIWork />
+      <Contact />
+    </main>
+  </body>
+</html>
+

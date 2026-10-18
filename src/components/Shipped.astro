@@ -1,2 +1,251 @@
-<!-- Shipped -->
+<section class="shipped" aria-labelledby="shipped-heading">
+  <div class="shipped__inner">
+    <header class="shipped__header">
+      <h2 id="shipped-heading">What I've shipped</h2>
+    </header>
+
+    <ul class="shipped__grid">
+      <li class="shipped__card">
+        <article>
+          <h3>ARIA-404: Labyrinth Protocol</h3>
+          <p>
+            I solo-built and self-published ARIA-404: Labyrinth Protocol, a cinematic
+            quick-time-event narrative game, on Steam under Loose Threads Interactive. It's
+            built in React and Electron with Steamworks achievements and a save system, with
+            AI-generated visuals, cinematics and voice. It released in Early Access on Nov 4,
+            2025 and is now free to play.
+          </p>
+          <a href="https://store.steampowered.com/app/4061580">
+            https://store.steampowered.com/app/4061580
+          </a>
+        </article>
+      </li>
+
+      <li class="shipped__card">
+        <article>
+          <h3>playdust.gg (DUST)</h3>
+          <p>
+            Permacore Worlds, a Next.js 16 hub for the DUST game-server network, with live
+            server wipe countdowns and Discord links. On DUST, Cursor cloud agents make the
+            repo changes, run the build, take desktop and mobile screenshots and open PRs that
+            I review and merge, and our site deploys on merge to main.
+          </p>
+          <a href="https://playdust.gg">https://playdust.gg</a>
+        </article>
+      </li>
+
+      <li class="shipped__card">
+        <article>
+          <h3>Snappy CRM and its call simulator</h3>
+          <p>
+            A local-first desktop CRM (Electron 35, Next.js 16, Prisma, SQLite) grown into an
+            AI-assisted office with a Telnyx phone system, voice agent and visual workflows;
+            first release v0.1.0. For its voice agent I built a call simulator that stress-tests
+            call flows before an agent ever takes a real call. At its peak it was running around
+            14 million tokens a day on a Gemini model.
+          </p>
+          <a href="https://snappy-crm.netlify.app">https://snappy-crm.netlify.app</a>
+        </article>
+      </li>
+
+      <li class="shipped__card">
+        <article>
+          <h3>SCMS and Mneme</h3>
+          <p>
+            I created SCMS, an open-source framework for making AI-assisted work repeatable:
+            useful patterns are captured, promoted when they keep proving useful, and retired
+            when they don't. It ships as a starter kit, whitepapers and an SSRN preprint
+            (5656271). Its approach was independently validated by findings in Google's Nested
+            Learning research (NeurIPS 2025). Google did not review SCMS; its findings support
+            the same approach in a different domain. I built Mneme on it: a chat app whose
+            long-term memory users can inspect and correct, plus an MCP server so other AI tools
+            share the same memory.
+          </p>
+          <div class="shipped__links">
+            <a href="https://github.com/AIalchemistART/scms-starter-kit">
+              https://github.com/AIalchemistART/scms-starter-kit
+            </a>
+            <a href="https://mneme-ai.netlify.app">https://mneme-ai.netlify.app</a>
+          </div>
+        </article>
+      </li>
+
+      <li class="shipped__card">
+        <article>
+          <h3>Clarity Intelligence Systems</h3>
+          <p>
+            A private AI family-history assistant, first for my own family and now offered as a
+            local service. It consolidates files from old computers, CDs and flash drives; scans
+            paper and runs text recognition; verifies every copy against the source; then answers
+            plain-language questions with the matching source passage under each answer. It runs
+            locally on the client's computer after delivery, with a citations-only Research mode.
+          </p>
+          <a href="https://clarityintelligence.io">https://clarityintelligence.io</a>
+        </article>
+      </li>
+    </ul>
+
+    <p class="shipped__more">
+      More: <a href="https://aialchemist.net">https://aialchemist.net</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .shipped {
+    --shipped-ink: #101828;
+    --shipped-muted: #475467;
+    --shipped-accent: #4338ca;
+    position: relative;
+    overflow: hidden;
+    border-block: 1px solid #e2e8f0;
+    background:
+      radial-gradient(circle at 92% 8%, rgb(186 230 253 / 0.42), transparent 24rem),
+      #f8fafc;
+  }
+
+  .shipped__inner {
+    width: min(100%, 78rem);
+    margin-inline: auto;
+    padding: clamp(4.5rem, 9vw, 7rem) clamp(1.5rem, 6vw, 5rem);
+  }
+
+  .shipped__header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    color: var(--shipped-ink);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 760;
+    letter-spacing: -0.055em;
+    line-height: 0.95;
+    text-wrap: balance;
+  }
+
+  .shipped__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .shipped__card {
+    grid-column: span 6;
+    min-width: 0;
+  }
+
+  .shipped__card:last-child {
+    grid-column: 4 / span 6;
+  }
+
+  article {
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #dbe3ee;
+    border-radius: 1.25rem;
+    background: rgb(255 255 255 / 0.9);
+    box-shadow: 0 1rem 3rem rgb(15 23 42 / 0.055);
+    padding: clamp(1.4rem, 3vw, 2rem);
+  }
+
+  article::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 0.25rem;
+    background: linear-gradient(#6366f1, #38bdf8);
+    content: "";
+  }
+
+  h3 {
+    color: var(--shipped-ink);
+    font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+    font-weight: 720;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  article p {
+    margin-top: 1rem;
+    color: var(--shipped-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  article > a,
+  .shipped__links {
+    margin-top: auto;
+    padding-top: 1.5rem;
+  }
+
+  .shipped__links {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  a {
+    width: fit-content;
+    max-width: 100%;
+    color: var(--shipped-accent);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+    text-decoration-color: rgb(67 56 202 / 0.3);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.24em;
+    transition:
+      color 160ms ease,
+      text-decoration-color 160ms ease;
+  }
+
+  a:hover {
+    color: #312e81;
+    text-decoration-color: currentColor;
+  }
+
+  a:focus-visible {
+    border-radius: 0.2rem;
+    outline: 3px solid #0ea5e9;
+    outline-offset: 4px;
+  }
+
+  .shipped__more {
+    margin-top: clamp(2rem, 5vw, 3rem);
+    color: var(--shipped-muted);
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 52rem) {
+    .shipped__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .shipped__card,
+    .shipped__card:last-child {
+      grid-column: auto;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    a {
+      transition: none;
+    }
+  }
+</style>
 

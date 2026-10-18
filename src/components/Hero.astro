@@ -1,2 +1,218 @@
-<!-- Hero -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__glow" aria-hidden="true"></div>
+
+  <div class="hero__content">
+    <h1 id="hero-title">Matthew (Manny) Walker</h1>
+
+    <p class="hero__headline">
+      Forward-Deployed Builder | Directing AI Coding Agents from Ticket to Merged PR |
+      TypeScript, Electron, Next.js
+    </p>
+
+    <p class="hero__location">
+      <span aria-hidden="true"></span>
+      Eagle (Boise), Idaho
+    </p>
+
+    <p class="hero__intro">
+      Builder who ships production work by directing AI coding agents and reviewing what
+      they produce. I architect, direct, review and ship AI-generated code daily: 1M+ lines
+      of AI-assisted code across projects in TypeScript, React/Next.js, Node, Electron,
+      Prisma and Supabase. Since 2023, as founder of AI Alchemist and Clarity Intelligence
+      Systems, I have owned the whole client loop: discovery, scoping, a working prototype,
+      live walkthroughs, iteration, launch and post-launch support.
+    </p>
+
+    <div class="hero__actions">
+      <a class="hero__button hero__button--primary" href="mailto:manny@aialchemist.net">
+        Email me
+      </a>
+      <a class="hero__button hero__button--secondary" href="https://aialchemist.net">
+        Portfolio
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    --hero-ink: #101828;
+    --hero-muted: #475467;
+    --hero-accent: #4338ca;
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    min-height: min(52rem, 100svh);
+    overflow: clip;
+    background:
+      radial-gradient(circle at 15% 10%, rgb(224 231 255 / 0.9), transparent 34rem),
+      linear-gradient(145deg, #ffffff 20%, #f8fafc 100%);
+  }
+
+  .hero::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image:
+      linear-gradient(rgb(99 102 241 / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(99 102 241 / 0.06) 1px, transparent 1px);
+    background-size: 4rem 4rem;
+    mask-image: linear-gradient(to bottom, black, transparent 76%);
+    content: "";
+  }
+
+  .hero__glow {
+    position: absolute;
+    z-index: -1;
+    top: -8rem;
+    right: -10rem;
+    width: min(38rem, 70vw);
+    aspect-ratio: 1;
+    border-radius: 999px;
+    background: rgb(125 211 252 / 0.28);
+    filter: blur(4rem);
+  }
+
+  .hero__content {
+    width: min(100%, 72rem);
+    margin: auto;
+    padding: clamp(4.5rem, 10vw, 8rem) clamp(1.5rem, 6vw, 5rem);
+  }
+
+  h1,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    max-width: 12ch;
+    color: var(--hero-ink);
+    font-size: clamp(3.25rem, 9vw, 6.75rem);
+    font-weight: 760;
+    letter-spacing: -0.065em;
+    line-height: 0.92;
+    text-wrap: balance;
+  }
+
+  .hero__headline {
+    max-width: 51rem;
+    margin-top: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--hero-accent);
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    line-height: 1.45;
+    text-wrap: balance;
+  }
+
+  .hero__location {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 1.25rem;
+    color: var(--hero-muted);
+    font-size: 0.95rem;
+    font-weight: 650;
+    letter-spacing: 0.035em;
+  }
+
+  .hero__location span {
+    width: 0.55rem;
+    height: 0.55rem;
+    border: 2px solid white;
+    border-radius: 999px;
+    background: #22c55e;
+    box-shadow: 0 0 0 2px rgb(34 197 94 / 0.2);
+  }
+
+  .hero__intro {
+    max-width: 49rem;
+    margin-top: clamp(2rem, 5vw, 3rem);
+    color: var(--hero-muted);
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.8;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+    margin-top: clamp(2rem, 5vw, 3rem);
+  }
+
+  .hero__button {
+    display: inline-flex;
+    min-height: 3.25rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+      transform 160ms ease,
+      background-color 160ms ease,
+      border-color 160ms ease,
+      box-shadow 160ms ease;
+  }
+
+  .hero__button:hover {
+    transform: translateY(-2px);
+  }
+
+  .hero__button:focus {
+    outline: 3px solid #0ea5e9;
+    outline-offset: 4px;
+  }
+
+  .hero__button--primary {
+    background: var(--hero-ink);
+    box-shadow: 0 0.75rem 1.75rem rgb(16 24 40 / 0.16);
+    color: white;
+  }
+
+  .hero__button--primary:hover {
+    background: #293056;
+    box-shadow: 0 1rem 2rem rgb(16 24 40 / 0.2);
+  }
+
+  .hero__button--secondary {
+    border-color: #cbd5e1;
+    background: rgb(255 255 255 / 0.78);
+    color: var(--hero-ink);
+    backdrop-filter: blur(0.5rem);
+  }
+
+  .hero__button--secondary:hover {
+    border-color: #94a3b8;
+    background: white;
+  }
+
+  @media (max-width: 30rem) {
+    .hero__content {
+      padding-block: 4rem;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 16vw, 4rem);
+    }
+
+    .hero__actions {
+      display: grid;
+    }
+
+    .hero__button {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__button {
+      transition: none;
+    }
+  }
+</style>
 

@@ -42,7 +42,7 @@
     position: relative;
     isolation: isolate;
     display: grid;
-    min-height: min(52rem, 100svh);
+    min-height: min(48rem, 100svh);
     overflow: clip;
     background:
       radial-gradient(circle at 15% 10%, rgb(224 231 255 / 0.9), transparent 34rem),
@@ -74,9 +74,9 @@
   }
 
   .hero__content {
-    width: min(100%, 72rem);
+    width: min(100%, var(--page-width));
     margin: auto;
-    padding: clamp(4.5rem, 10vw, 8rem) clamp(1.5rem, 6vw, 5rem);
+    padding: var(--section-space) var(--page-gutter);
   }
 
   h1,
@@ -193,7 +193,7 @@
 
   @media (max-width: 30rem) {
     .hero__content {
-      padding-block: 4rem;
+      padding-block: 4.25rem;
     }
 
     h1 {

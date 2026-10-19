@@ -15,9 +15,7 @@
             AI-generated visuals, cinematics and voice. It released in Early Access on Nov 4,
             2025 and is now free to play.
           </p>
-          <a href="https://store.steampowered.com/app/4061580">
-            https://store.steampowered.com/app/4061580
-          </a>
+          <a href="https://store.steampowered.com/app/4061580">Steam page</a>
         </article>
       </li>
 
@@ -30,7 +28,7 @@
             repo changes, run the build, take desktop and mobile screenshots and open PRs that
             I review and merge, and our site deploys on merge to main.
           </p>
-          <a href="https://playdust.gg">https://playdust.gg</a>
+          <a href="https://playdust.gg">playdust.gg</a>
         </article>
       </li>
 
@@ -44,7 +42,7 @@
             call flows before an agent ever takes a real call. At its peak it was running around
             14 million tokens a day on a Gemini model.
           </p>
-          <a href="https://snappy-crm.netlify.app">https://snappy-crm.netlify.app</a>
+          <a href="https://snappy-crm.netlify.app">Live demo</a>
         </article>
       </li>
 
@@ -63,9 +61,9 @@
           </p>
           <div class="shipped__links">
             <a href="https://github.com/AIalchemistART/scms-starter-kit">
-              https://github.com/AIalchemistART/scms-starter-kit
+              SCMS starter kit on GitHub
             </a>
-            <a href="https://mneme-ai.netlify.app">https://mneme-ai.netlify.app</a>
+            <a href="https://mneme-ai.netlify.app">Mneme</a>
           </div>
         </article>
       </li>
@@ -80,13 +78,13 @@
             plain-language questions with the matching source passage under each answer. It runs
             locally on the client's computer after delivery, with a citations-only Research mode.
           </p>
-          <a href="https://clarityintelligence.io">https://clarityintelligence.io</a>
+          <a href="https://clarityintelligence.io">clarityintelligence.io</a>
         </article>
       </li>
     </ul>
 
     <p class="shipped__more">
-      More: <a href="https://aialchemist.net">https://aialchemist.net</a>
+      More: <a href="https://aialchemist.net">AI Alchemist portfolio</a>
     </p>
   </div>
 </section>
@@ -105,9 +103,9 @@
   }
 
   .shipped__inner {
-    width: min(100%, 78rem);
+    width: min(100%, var(--page-width));
     margin-inline: auto;
-    padding: clamp(4.5rem, 9vw, 7rem) clamp(1.5rem, 6vw, 5rem);
+    padding: var(--section-space) var(--page-gutter);
   }
 
   .shipped__header {
@@ -136,7 +134,7 @@
   .shipped__grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 1rem;
+    gap: clamp(1rem, 2vw, 1.5rem);
     margin: 0;
     padding: 0;
     list-style: none;

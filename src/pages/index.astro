@@ -4,6 +4,9 @@ import Hero from "../components/Hero.astro";
 import HowIWork from "../components/HowIWork.astro";
 import Shipped from "../components/Shipped.astro";
 import "../styles/global.css";
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+const socialImageUrl = new URL("/og-image.png", Astro.site).href;
 ---
 
 <!doctype html>
@@ -24,7 +27,8 @@ import "../styles/global.css";
       property="og:description"
       content="Builder who ships production work by directing AI coding agents and reviewing what they produce."
     />
-    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -38,7 +42,7 @@ import "../styles/global.css";
       name="twitter:description"
       content="Builder who ships production work by directing AI coding agents and reviewing what they produce."
     />
-    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:image" content={socialImageUrl} />
     <meta
       name="twitter:image:alt"
       content="Matthew (Manny) Walker — Forward-Deployed Builder"
